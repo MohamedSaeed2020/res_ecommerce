@@ -1,0 +1,27 @@
+[
+  {
+    "id": "1",
+    "name": "Steak",
+    "img": "https://purepng.com/public/uploads/large/purepng.com-meatfood-meat-red-fresh-grill-cook-beef-steak-9415246237676ksid.png"
+  },
+  {
+    "id": "2",
+    "name": "Vegetables",
+    "img": "https://purepng.com/public/uploads/large/kale-jmb.png"
+  },
+  {
+    "id": "3",
+    "name": "Beverages",
+    "img": "https://purepng.com/public/uploads/large/purepng.com-orange-juicejuicebeverageliquidfruit-and-vegetablesbeveragesorange-juice-17015272297199mieg.png"
+  },
+  {
+    "id": "4",
+    "name": "Fish",
+    "img": "https://purepng.com/public/uploads/large/purepng.com-fried-fishfood-fish-tasty-dish-cook-eat-fried-seafood-fry-spicy-recipe-941524618184u09tn.png"
+  },
+  {
+    "id": "5",
+    "name": "Juice",
+    "img": "https://purepng.com/public/uploads/large/purepng.com-tomato-juicedrinks-food-tomato-juice-941524640518y7f9f.png"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "id": "1",
+    "name": "Home Address",
+    "address": "Mustafa St. No:2, Street x12",
+    "img": "https://purepng.com/public/uploads/large/map-o86.png"
+  },
+  {
+    "id": "2",
+    "name": "Office Address",
+    "address": "Axis Istanbul, B2 Block, Floor 2, Office 11",
+    "img": "https://purepng.com/public/uploads/large/map-o86.png"
+  }
+]

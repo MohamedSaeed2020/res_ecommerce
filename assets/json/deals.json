@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1",
+    "name": "Rolex Submariner Date",
+    "description": "Pieces 5",
+    "location": "15 Minutes Away",
+    "img": "https://purepng.com/public/uploads/large/rolex-submariner-date-mpa.png",
+    "price_before_deal": "18",
+    "price_after_deal": "12",
+    "is_favorite": false
+  },
+  {
+    "id": "2",
+    "name": "Wrist Watch",
+    "description": "Pieces 10",
+    "location": "20 Minutes Away",
+    "img": "https://purepng.com/public/uploads/large/wrist-watch-ogx.png",
+    "price_before_deal": "20",
+    "price_after_deal": "15",
+    "is_favorite": false
+  }
+]
