@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:get/get.dart';
@@ -38,8 +40,10 @@ class GroceryScreen extends StatelessWidget {
             height: 3.h,
           ),
           GetBuilder<GroceryController>(builder: (controller) {
+            log('MediaQuery Width: ${MediaQuery.of(context).size.width}');
+            log('GetX Width: ${Get.width}');
             return SizedBox(
-              height: SizeConfig.heightMultiplier*12,
+              height: MediaQuery.of(context).size.width>600?SizeConfig.heightMultiplier*12:SizeConfig.heightMultiplier*10,
               child: controller.addressesList.isEmpty
                   ? const Center(
                       child: SpinKitFadingCircle(
@@ -94,7 +98,7 @@ class GroceryScreen extends StatelessWidget {
           ),
           GetBuilder<GroceryController>(builder: (controller) {
             return SizedBox(
-              height: SizeConfig.heightMultiplier*18,
+              height:MediaQuery.of(context).size.width>600?SizeConfig.heightMultiplier*18:SizeConfig.heightMultiplier*14,
               child: controller.categoriesList.isEmpty
                   ? const Center(
                       child: SpinKitFadingCircle(
@@ -132,7 +136,7 @@ class GroceryScreen extends StatelessWidget {
           ),
           GetBuilder<GroceryController>(builder: (controller) {
             return SizedBox(
-              height: SizeConfig.heightMultiplier*18,
+              height:MediaQuery.of(context).size.width>600?SizeConfig.heightMultiplier*18:SizeConfig.heightMultiplier*15,
               child: controller.dealsOfTheDayList.isEmpty
                   ? const Center(
                       child: SpinKitFadingCircle(

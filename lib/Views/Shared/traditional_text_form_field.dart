@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:res_ecommerce/Config/colors.dart';
 import 'package:res_ecommerce/Config/size.dart';
 import 'package:sizer/sizer.dart';
@@ -57,7 +58,8 @@ class TraditionalTextFormField extends StatelessWidget {
                 onPressed: suffixPressed,
               )
             : null,
-        contentPadding: EdgeInsets.symmetric(vertical:SizeConfig.heightMultiplier*2.5 ),
+        contentPadding: EdgeInsets.symmetric(vertical:MediaQuery.of(context).size.width>600?SizeConfig.heightMultiplier*2.5:SizeConfig.heightMultiplier*1.5,
+        ),
         isDense: true,
         filled: true,
         fillColor: AppColors.searchBoxColor,

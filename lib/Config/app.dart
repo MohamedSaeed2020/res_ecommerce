@@ -19,15 +19,15 @@ class MyApp extends StatelessWidget {
           useInheritedMediaQuery: true,
           debugShowCheckedModeBanner: false,
           initialBinding: Binding(),
-          builder: (BuildContext context, Widget? child) {
+/*          builder: (BuildContext context, Widget? child) {
             return MediaQuery(
               data: MediaQuery.of(context).copyWith(
                 textScaleFactor: 1.0,
               ),
               child: child!,
             );
-          },
-          //builder: DevicePreview.appBuilder,
+          },*/
+          builder: DevicePreview.appBuilder,
           theme: ThemeData(
             fontFamily: fontFamily,
           ),
