@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:res_ecommerce/Config/colors.dart';
+import 'package:res_ecommerce/Config/size.dart';
 import 'package:sizer/sizer.dart';
 
 // ignore: must_be_immutable
@@ -49,14 +50,14 @@ class TraditionalTextFormField extends StatelessWidget {
                 icon: Center(
                   child: Icon(
                     suffix,
-                    size: 3.5.h,
+                    size: SizeConfig.widthMultiplier*5,
                     color: AppColors.searchIconColor,
                   ),
                 ),
                 onPressed: suffixPressed,
               )
             : null,
-        contentPadding: EdgeInsets.fromLTRB(3.w, 1.h, 3.w, 1.h),
+        contentPadding: EdgeInsets.symmetric(vertical:SizeConfig.heightMultiplier*2.5 ),
         isDense: true,
         filled: true,
         fillColor: AppColors.searchBoxColor,

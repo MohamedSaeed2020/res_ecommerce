@@ -14,7 +14,6 @@ class Offers extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetBuilder<GroceryController>(builder: (controller) {
       return Container(
-        height: 20.h,
         padding: EdgeInsets.all(3.w),
         decoration: BoxDecoration(
           color: AppColors.offersCardColor,
@@ -29,10 +28,13 @@ class Offers extends StatelessWidget {
         )
             : Row(
           children: [
-            SizedBox(
-              width: (Get.width / 2) - 20.w,
+            const Flexible(
+              fit: FlexFit.tight,
+              child: SizedBox(
+              ),
             ),
-            Expanded(
+            Flexible(
+              flex: 2,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -56,7 +58,6 @@ class Offers extends StatelessWidget {
                       color: AppColors.offersDescriptionColor,
                       fontSize: 31.sp,
                     ),
-                    overflow: TextOverflow.ellipsis,
                   ),
                   SizedBox(
                     height: 0.5.h,
@@ -88,13 +89,11 @@ class Offers extends StatelessWidget {
                   SizedBox(
                     height: 0.5.h,
                   ),
-                  Expanded(
-                    child: Text(
-                      "* Available until ${controller.offersModel!.availableUntil}",
-                      style: TextStyle(
-                        color: AppColors.whiteColor,
-                        fontSize: 9.sp,
-                      ),
+                  Text(
+                    "* Available until ${controller.offersModel!.availableUntil}",
+                    style: TextStyle(
+                      color: AppColors.whiteColor,
+                      fontSize: 9.sp,
                     ),
                   ),
                 ],

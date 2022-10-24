@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:get/get.dart';
 import 'package:res_ecommerce/Config/colors.dart';
+import 'package:res_ecommerce/Config/size.dart';
 import 'package:res_ecommerce/Controllers/grocery_controller.dart';
 import 'package:res_ecommerce/Views/Screens/Grocery/Components/addresses_item.dart';
 import 'package:res_ecommerce/Views/Screens/Grocery/Components/category_item.dart';
@@ -38,7 +39,7 @@ class GroceryScreen extends StatelessWidget {
           ),
           GetBuilder<GroceryController>(builder: (controller) {
             return SizedBox(
-              height: 8.h,
+              height: SizeConfig.heightMultiplier*12,
               child: controller.addressesList.isEmpty
                   ? const Center(
                       child: SpinKitFadingCircle(
@@ -93,7 +94,7 @@ class GroceryScreen extends StatelessWidget {
           ),
           GetBuilder<GroceryController>(builder: (controller) {
             return SizedBox(
-              height: 12.h,
+              height: SizeConfig.heightMultiplier*18,
               child: controller.categoriesList.isEmpty
                   ? const Center(
                       child: SpinKitFadingCircle(
@@ -131,7 +132,7 @@ class GroceryScreen extends StatelessWidget {
           ),
           GetBuilder<GroceryController>(builder: (controller) {
             return SizedBox(
-              height: 14.h,
+              height: SizeConfig.heightMultiplier*18,
               child: controller.dealsOfTheDayList.isEmpty
                   ? const Center(
                       child: SpinKitFadingCircle(

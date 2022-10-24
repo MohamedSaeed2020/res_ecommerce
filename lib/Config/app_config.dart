@@ -8,5 +8,11 @@ class AppConfigs {
     AppHelpers.makeAppInPortraitModeOnly();
     AppHelpers.makeStatusBarIconDark();
     runApp(const MyApp());
+    /*    runApp(
+      DevicePreview(
+        enabled: !kReleaseMode,
+        builder: (context) => const MyApp(), // Wrap your app
+      ),
+    );*/
   }
 }

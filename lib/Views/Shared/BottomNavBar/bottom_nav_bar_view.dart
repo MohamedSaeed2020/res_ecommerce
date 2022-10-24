@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:res_ecommerce/Config/assets_paths.dart';
 import 'package:res_ecommerce/Config/colors.dart';
+import 'package:res_ecommerce/Config/size.dart';
 import 'package:res_ecommerce/Controllers/cart_controller.dart';
 import 'package:res_ecommerce/Views/Shared/BottomNavBar/bottom_nav_bar_item.dart';
 import 'package:sizer/sizer.dart';
@@ -27,14 +28,16 @@ class MyBottomNavigationBar extends StatelessWidget {
               bottom: 1.h,
             ),
             child: Row(
-              children:  <Widget>[
+              children: <Widget>[
                 const BottomNavBarItem(
                   imagePath: AssetsManager.groceryIcon,
                   index: 0,
                   title: 'Grocery',
                 ),
-                SizedBox(width: 12.w,),
-                const  BottomNavBarItem(
+                SizedBox(
+                  width: 12.w,
+                ),
+                const BottomNavBarItem(
                   imagePath: AssetsManager.newsIcon,
                   index: 1,
                   title: 'News',
@@ -45,8 +48,10 @@ class MyBottomNavigationBar extends StatelessWidget {
                   index: 2,
                   title: 'Favorites',
                 ),
-                SizedBox(width: 12.w,),
-                const  BottomNavBarItem(
+                SizedBox(
+                  width: 12.w,
+                ),
+                const BottomNavBarItem(
                   imagePath: AssetsManager.cartIcon,
                   index: 3,
                   title: 'Cart',
@@ -67,31 +72,32 @@ class MyBottomNavigationBar extends StatelessWidget {
                 shape: BoxShape.circle,
               ),
             ),
-            Positioned(
-              bottom: 1.h,
-              child: Stack(
-                alignment: Alignment.topCenter,
-                children: [
-                  Image.asset(AssetsManager.totalPriceIcon,width: 11.w,height: 11.w,),
-                  Positioned(
-                    right: 3.w,
-                    top: 0.5.h,
-                    child: SizedBox(
-                      width: 8.w,
-                      child:  FittedBox(
-                        child: GetBuilder<CartController>(builder: (controller){
-                          return  Text(
-                            '\$ ${controller.totalPrice.toString()}',
-                            style: const TextStyle(
-                              color: AppColors.whiteColor,
-                            ),
 
-                          );
-                        }),
+            Positioned(
+              bottom: 2.h,
+              child: Image.asset(
+                AssetsManager.totalPriceIcon,
+                width: SizeConfig.widthMultiplier * 10,
+                height: SizeConfig.widthMultiplier * 10,
+                  fit:BoxFit.fill
+              ),
+            ),
+              Positioned(
+              top: 3.h,
+              left: 2.w,
+              child: SizedBox(
+                width: 8.w,
+                child: FittedBox(
+                  child:
+                  GetBuilder<CartController>(builder: (controller) {
+                    return Text(
+                      '\$ ${controller.totalPrice.toString()}',
+                      style: const TextStyle(
+                        color: AppColors.whiteColor,
                       ),
-                    ),
-                  ),
-                ],
+                    );
+                  }),
+                ),
               ),
             ),
           ],
